@@ -1,0 +1,18 @@
+{
+    "name": "evlz/pest-bundle",
+    "description": "Symfony2 Pest Bundle",
+    "require": {
+        "symfony/symfony": "~2.4",
+        "educoder/pest": "dev-master"
+    },
+    "license": "MIT",
+    "autoload": {
+        "psr-0": { "": "src/" }
+    },
+    "authors": [
+        {
+            "name": "Ruslan Hanov",
+            "email": "hanov.ruslan@gmail.com"
+        }
+    ]
+}
