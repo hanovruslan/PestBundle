@@ -7,26 +7,27 @@
  * Time: 19:45
  */
 
-use Evlz\PestBundle\Entity\JSONRestClient;
+use Evlz\PestBundle\Entity\Rest;
 
 require_once __DIR__ . '/../vendor/autoload.php';
 
 $endpoints = [
     'twitter' => [
-        'domain' => 'https://api.twitter.com',
+        'baseUrl' => 'https://api.twitter.com',
         'uri' => '/1.1/help/configuration.json',
     ],
     'youtube' => [
-        'domain' => 'http://gdata.youtube.com',
-        'uri' => '/feeds/api/videos?alt=json&v=2&safeSearch=none&time=all_time&uploader=partner',
+        'baseUrl' => 'http://api.wunderground.com',
+        'uri' => '/api/key/geolookup/q/CA/San_Francisco.json',
     ],
 ];
 
 foreach($endpoints as $endpoint){
     try{
-        $restClient = new JSONRestClient($endpoint['domain']);
+        $rest = new Rest();
+        $restClient = $rest->createClient($endpoint['baseUrl']);
         $result = $restClient->get($endpoint['uri']);
-        echo PHP_EOL,print_r([$result['version']], true),PHP_EOL;
+        echo PHP_EOL,print_r([$result], true),PHP_EOL;
     }
     catch(\Exception $e){
         echo PHP_EOL,'Caught exception \'' . get_class($e) . '\': ' . $e->getMessage(),PHP_EOL;

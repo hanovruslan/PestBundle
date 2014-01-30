@@ -53,13 +53,26 @@ You can get the pest service simply by using the container. From your controller
 
 ```php
 
-// get base service
+$baseUrl = 'http://gdata.youtube.com';
+
+// get service
 
 $rest = $this->get('evlz_pest.rest');
 
-// get json service (auto converting for request\response excluding exception messages (@todo) )
+// create client. \PestJSON by default
 
-$restJSON = $this->get('evlz_pest.rest_json');
+$client = $rest->createClient($baseUrl);
+
+// create \Pest client
+
+$clientType = \Evlz\PestBundle\Entity\Factory::TYPE_MAIN;//
+$client = $rest->createClient($baseUrl, $clientType);
+
+// create \Pest client. forced re-creation
+
+$clientType = \Evlz\PestBundle\Entity\Factory::TYPE_JSON;//
+$client = $rest->createClient($baseUrl, $clientType, true);
+
 
 
 ```

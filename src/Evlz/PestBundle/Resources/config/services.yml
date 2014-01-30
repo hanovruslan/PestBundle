@@ -1,9 +1,6 @@
 parameters:
-  evlz_pest.rest.class: Evlz\PestBundle\Entity\RestClient
-  evlz_pest.json_rest.class: Evlz\PestBundle\Entity\JSONRestClient
+  evlz_pest.rest.class: Evlz\PestBundle\Entity\Rest
 
 services:
   evlz_pest.rest:
     class: %evlz_pest.rest.class%
-  evlz_pest.rest_json:
-    class: %evlz_pest.json_rest.class%
