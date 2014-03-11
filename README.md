@@ -15,7 +15,7 @@ Add to your `evlz-pest-bundle` to your dependencies:
     "require": {
 
         ...
-        "evlz/pest-bundle": "dev-master"
+        "evlz/pest-bundle": "~1.0"
 
     }
 
