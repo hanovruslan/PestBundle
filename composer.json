@@ -3,7 +3,7 @@
     "description": "Symfony2 Pest Bundle",
     "require": {
         "symfony/symfony": "~2.4",
-        "educoder/pest": "dev-master"
+        "educoder/pest": "~1.0"
     },
     "license": "MIT",
     "autoload": {
