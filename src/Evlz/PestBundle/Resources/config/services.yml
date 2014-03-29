@@ -1,5 +1,5 @@
-parameters:
-  evlz_pest.rest.class: Evlz\PestBundle\Entity\Rest
+imports:
+  - { resource: parameters.yml }
 
 services:
   evlz_pest.rest:

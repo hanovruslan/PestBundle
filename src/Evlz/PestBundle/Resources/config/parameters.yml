@@ -1,0 +1,2 @@
+parameters:
+  evlz_pest.rest.class: Evlz\PestBundle\Entity\Rest

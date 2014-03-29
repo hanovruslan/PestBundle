@@ -9,11 +9,14 @@
 
 namespace Evlz\PestBundle\Entity;
 
-class Rest
+use Pest;
+use PestJSON;
+
+class Rest implements RestInterface
 {
 
     /**
-     * @var \Pest|\PestJSON $client;
+     * @var Pest|PestJSON $client;
      */
 
     protected $client;
@@ -21,7 +24,8 @@ class Rest
     /**
      * @param $baseUrl
      * @param string $type
-     * @return null|\Pest|\PestJSON
+     * @param boolean $forced
+     * @return null|Pest|PestJSON
      */
 
     public function createClient($baseUrl, $type = Factory::TYPE_JSON, $forced = false)
