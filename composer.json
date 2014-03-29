@@ -17,5 +17,10 @@
             "name": "Ruslan Hanov",
             "email": "hanov.ruslan@gmail.com"
         }
-    ]
+    ],
+    "extra": {
+        "branch-alias": {
+            "dev-master": "0.2.x-dev"
+        }
+    }
 }
