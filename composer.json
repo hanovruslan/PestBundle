@@ -2,8 +2,8 @@
     "name": "evlz/pest-bundle",
     "description": "Symfony2 Pest Bundle",
     "require": {
-        "symfony/symfony": "~2.4",
-        "educoder/pest": "~1.0"
+        "symfony/symfony": "2.4.*",
+        "educoder/pest": "1.0.*"
     },
     "require-dev": {
         "phpunit/phpunit": "~4.0"
@@ -20,7 +20,7 @@
     ],
     "extra": {
         "branch-alias": {
-            "dev-master": "0.2.x-dev"
+            "dev-master": "0.3.x-dev"
         }
     }
 }
