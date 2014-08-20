@@ -73,8 +73,16 @@ $client = $rest->createClient($baseUrl, $clientType);
 $clientType = \Evlz\PestBundle\Entity\Factory::TYPE_JSON;//
 $client = $rest->createClient($baseUrl, $clientType, true);
 
+```
 
+### Tests
 
 ```
+
+% phpunit src/Evlz/PestBundle/Tests/Entity/RestTest.php
+% phpunit src/Evlz/PestBundle/Tests/Entity/DataConvertorTest.php
+
+```
+
 
 Please, see https://github.com/educoder/pest for details
