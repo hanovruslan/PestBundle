@@ -45,7 +45,7 @@ class DataConvertor
     public function restructArray($array)
     {
         $result = [];
-        $callback = [$this, '_convert'];
+        $callback = [$this, __FUNCTION__];
 
         foreach($array as $parentKey => $parentValue)
         {
