@@ -16,6 +16,18 @@ class Rest implements RestInterface
 {
 
     /**
+     * @var string
+     */
+
+    protected $baseUrl;
+
+    /**
+     * @var string
+     */
+
+    protected $type = Factory::TYPE_JSON;
+
+    /**
      * @var Pest|PestJSON $client;
      */
 
@@ -28,6 +40,7 @@ class Rest implements RestInterface
      * @return null|Pest|PestJSON
      */
 
+
     public function createClient($baseUrl, $type = Factory::TYPE_JSON, $forced = false)
     {
         if(!isset($this->client) || $forced)
@@ -36,5 +49,30 @@ class Rest implements RestInterface
         }
 
         return $this->client;
+    }
+
+    public function setBaseUrl($baseUrl)
+    {
+        $this->baseUrl = $baseUrl;
+    }
+
+    public function getBaseUrl()
+    {
+        return $this->baseUrl;
+    }
+
+    public function setType($type)
+    {
+        $this->type = $type;
+    }
+
+    public function getType()
+    {
+        return $this->type;
+    }
+
+    public function buildClient($forced = true)
+    {
+        return $this->createClient($this->getBaseUrl(), $this->getType(), $forced);
     }
 }

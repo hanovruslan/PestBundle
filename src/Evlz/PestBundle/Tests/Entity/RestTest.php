@@ -52,4 +52,22 @@ class RestTest  extends PHPUnit_Framework_TestCase
             ->createClient('/hello/test', Factory::TYPE_JSON);
         $this->assertTrue($client instanceof PestJSON);
     }
+
+    public function testBuildClientJson()
+    {
+        $this->rest->setType(Factory::TYPE_JSON);
+        $this->rest->setBaseUrl('/hello/test');
+
+        $client = $this->rest->buildClient(true);
+        $this->assertTrue($client instanceof PestJSON);
+    }
+
+    public function testBuildClient()
+    {
+        $this->rest->setType(Factory::TYPE_MAIN);
+        $this->rest->setBaseUrl('/hello/test');
+
+        $client = $this->rest->buildClient(true);
+        $this->assertTrue($client instanceof Pest);
+    }
 }

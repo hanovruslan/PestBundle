@@ -15,4 +15,14 @@ interface RestInterface
 
     public function createClient($baseUrl, $type = Factory::TYPE_JSON, $forced = false);
 
+    public function setBaseUrl($baseUrl);
+
+    public function getBaseUrl();
+
+    public function setType($type);
+
+    public function getType();
+
+    public function buildClient();
+
 } 
