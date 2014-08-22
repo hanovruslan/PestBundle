@@ -80,7 +80,7 @@ $client = $rest->createClient($baseUrl, $clientType, true);
 ```
 
 % phpunit src/Evlz/PestBundle/Tests/Entity/RestTest.php
-% phpunit src/Evlz/PestBundle/Tests/Entity/DataConvertorTest.php
+% phpunit src/Evlz/PestBundle/Tests/Entity/DataConverterTest.php
 
 ```
 
