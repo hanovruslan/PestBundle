@@ -13,8 +13,6 @@ Add to your `evlz-pest-bundle` to your dependencies:
 {
 
     "require": {
-
-        ...
         "evlz/pest-bundle": "~1.0"
 
     }
